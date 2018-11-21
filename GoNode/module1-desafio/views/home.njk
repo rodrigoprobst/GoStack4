@@ -1,0 +1,36 @@
+<link
+	rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+/>
+<div class="container mt-5">
+	<div class="jumbotron text-center">
+		<h1 class="display-3">Bem vindo</h1>
+		<p class="lead">Desafio do módulo 1 - GoNode</p>
+		<hr class="my-2" />
+		<form action="/check" method="POST">
+			<div class="form-group">
+				<label class="sr-only" for="inputIdade">Idade</label>
+				<input
+					type="text"
+					class="form-control"
+					name="inputIdade"
+					id="inputIdade"
+					aria-describedby="helpIdade"
+					placeholder="Idade"
+				/>
+				<small id="helpIdade" class="form-text text-muted"
+					>Digite sua Idade</small
+				>
+			</div>
+			<p class="lead">
+				<button
+					class="btn btn-primary btn-lg btn-block"
+					role="button"
+					type="submit"
+				>
+					Enviar Formulário
+				</button>
+			</p>
+		</form>
+	</div>
+</div>
