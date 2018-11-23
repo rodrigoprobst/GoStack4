@@ -1,11 +1,9 @@
-// yarn add express
-// yarn add nodemon -D
-// yarn add nunjucks
-// yarn add eslint -D
+// yarn add express nunjucks
+// yarn add nodemon eslint -D
 // npx eslint --init
 //   Use a popular style guide
 //   Standard (https://github.com/standard/standard)
 //   JSON
 //   Y
-//   delete package-lock.json
+//   del package-lock.json
 //   yarn
