@@ -1,6 +1,9 @@
 const express = require('express')
+const session = require('express-session')
+const LokiStore = require('connect-loki')(session)
 const nunjucks = require('nunjucks')
 const path = require('path')
+const flash = require('connect-flash')
 
 class App {
   constructor () {
@@ -14,6 +17,16 @@ class App {
 
   middleware () {
     this.express.use(express.urlencoded({ extended: false }))
+    this.express.use(flash())
+    this.express.use(
+      session({
+        name: 'root',
+        secret: 'MyAppSecret',
+        resave: true,
+        store: new LokiStore(),
+        saveUninitialized: true
+      })
+    )
   }
   views () {
     nunjucks.configure(path.resolve(__dirname, 'app', 'views'), {
