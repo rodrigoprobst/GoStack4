@@ -245,6 +245,8 @@ ul.providers {
   margin-top: 10px;
   padding-top: 10px;
   border-top: 1px solid #eee;
+  max-height: 50vh;
+  overflow-y: scroll;
 }
 
 #hours label {
