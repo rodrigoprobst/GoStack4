@@ -1,0 +1,9 @@
+{% for appointment in appointments %}
+  <li class="provider">
+    <div>
+      <img src="/files/{{ appointment.user.avatar }}" />
+      <strong>{{ appointment.user.name }} <br> {{ appointment.date | date("HH:mm") }} </strong>
+    </div>
+    <a href="/app/appointments/delete/{{ appointment.id }}">x</a>
+  </li>
+{% endfor %}

@@ -7,3 +7,7 @@ Até agora criamos a parte do usuário poder agendar um serviço com o prestador
 A partir de agora você deve implementar o seguinte:
 
 Crie uma seção para o prestador de serviços acompanhar os agendamentos do dia programados com ele. Essa seção deve incluir as informações do usuário que agendou e também o horário do agendamento.
+
+# O que foi feito:
+
+Caso o usuário seja um provider, ele pode acessar seus agendamentos (por dia) e excluí-los, caso deseje

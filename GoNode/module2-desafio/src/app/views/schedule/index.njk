@@ -1,0 +1,24 @@
+{% extends "_layouts/default.njk" %}
+{% block body %}
+  <div class="content">
+    <strong>Confira seus agendamentos</strong>
+    <input type="text" class="flatpickr" name="" placeholder="Escolha uma Data">
+    <ul class="providers" id="providers">
+    </ul>
+    <a href="/app/dashboard" class="myAppointments">Voltar</a>
+  </div>
+
+  <script>
+    flatpickr('.flatpickr', {
+      minDate: new Date(),
+      dateFormat: 'd/m/Y',
+      onChange: function (date) {
+        fetch(`/app/scheduleList?date=${date[0].getTime()}`).then(function (response) {
+          response.text().then(function(html){
+            document.getElementById('providers').innerHTML = html
+          })
+        })
+      }
+    })
+  </script>
+{% endblock %}
