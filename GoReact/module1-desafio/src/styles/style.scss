@@ -69,5 +69,8 @@ hr {
       font-weight: bold;
       color: #999;
     }
+    &:last-of-type {
+      margin-bottom: 50px;
+    }
   }
 }

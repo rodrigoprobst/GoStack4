@@ -8,7 +8,7 @@ Container.defaultProps = {
 };
 
 Container.propTypes = {
-  children: PropTypes.string,
+  children: PropTypes.node,
 };
 
 export default Container;
