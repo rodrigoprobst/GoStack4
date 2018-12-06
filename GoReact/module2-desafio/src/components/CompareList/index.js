@@ -16,12 +16,14 @@ const CompareList = ({ repositories, handleRemoveRepository, handleUpdateReposit
       } = repository;
       return (
         <Repository key={id}>
-          <button type="button" data-key={id} onClick={handleRemoveRepository}>
-            <i className="fa fa-times" />
-          </button>
-          <button type="button" data-key={id} onClick={handleUpdateRepository}>
-            <i className="fa fa-refresh" />
-          </button>
+          <div className="buttonsHolder">
+            <button type="button" data-key={id} onClick={handleRemoveRepository}>
+              <i className="fa fa-fw fa-times" />
+            </button>
+            <button type="button" data-key={id} onClick={handleUpdateRepository}>
+              <i className="fa fa-fw fa-refresh" />
+            </button>
+          </div>
           <header>
             <img src={avatarUrl} alt={login} />
             <strong>{name}</strong>

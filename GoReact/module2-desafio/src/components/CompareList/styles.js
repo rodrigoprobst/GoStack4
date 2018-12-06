@@ -15,7 +15,25 @@ export const Repository = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0 10px 20px 10px;
-
+  .buttonsHolder {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    & button {
+      border-radius: 0 0 3px 0;
+      border: none;
+      background: #ff5555;
+      padding: 10px;
+      & i {
+        color: white;
+      }
+      & + button {
+        border-radius: 0 0 0 3px;
+        background: #55ff55;
+      }
+    }
+  }
   header {
     padding: 30px;
     display: flex;
